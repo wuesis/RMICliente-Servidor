@@ -9,11 +9,11 @@ public class ServiceEntity extends UnicastRemoteObject implements Service {
         super();
     }
 
-    public void ServicioUno() throws RemoteException {
-        System.out.println("RMI es genial por favor paseme! :D ");
+    public void ServicioUno(String clientIP) throws RemoteException {
+        System.out.println("Hola Servidor RMI! desde el cliente: " + clientIP);
     }
 
     public int ServicioDos() throws RemoteException {
-        return 5;
+        return 42;
     }
 }
